@@ -1,0 +1,74 @@
+Source: haskell-zip-archive
+Maintainer: Debian Haskell Group <pkg-haskell-maintainers@lists.alioth.debian.org>
+Uploaders:
+ Joachim Breitner <nomeata@debian.org>,
+Priority: optional
+Section: haskell
+Rules-Requires-Root: no
+Build-Depends:
+ cdbs,
+ debhelper (>= 10),
+ ghc (>= 8.4.3),
+ ghc-prof,
+ haskell-devscripts (>= 0.13),
+ libghc-digest-dev (>= 0.0.0.1),
+ libghc-digest-prof,
+ libghc-zlib-dev,
+ libghc-zlib-prof,
+ libghc-hunit-dev,
+ libghc-temporary-dev,
+ libminizip-dev,
+ unzip,
+Build-Depends-Indep: ghc-doc,
+ libghc-digest-doc,
+ libghc-zlib-doc,
+Standards-Version: 4.5.0
+Homepage: https://github.com/jgm/zip-archive
+Vcs-Browser: https://salsa.debian.org/haskell-team/DHG_packages/tree/master/p/haskell-zip-archive
+Vcs-Git: https://salsa.debian.org/haskell-team/DHG_packages.git [p/haskell-zip-archive]
+
+Package: libghc-zip-archive-dev
+Architecture: any
+Depends:
+ ${haskell:Depends},
+ ${misc:Depends},
+ ${shlibs:Depends},
+Suggests:
+ ${haskell:Suggests},
+Provides:
+ ${haskell:Provides},
+Description: library to create, modify and extract files from zip archives${haskell:ShortBlurb}
+ The zip-archive library provides functions for creating, modifying, and
+ extracting files from zip archives.
+ .
+ ${haskell:Blurb}
+
+Package: libghc-zip-archive-prof
+Architecture: any
+Depends:
+ ${haskell:Depends},
+ ${misc:Depends},
+ ${shlibs:Depends},
+Provides:
+ ${haskell:Provides},
+Description: library to create and modify zip archives${haskell:ShortBlurb}
+ The zip-archive library provides functions for creating, modifying, and
+ extracting files from zip archives.
+ .
+ ${haskell:Blurb}
+
+Package: libghc-zip-archive-doc
+Architecture: all
+Section: doc
+Depends:
+ ${haskell:Depends},
+ ${misc:Depends},
+Recommends:
+ ${haskell:Recommends},
+Suggests:
+ ${haskell:Suggests},
+Description: library to create, modify and extract files from zip archives${haskell:ShortBlurb}
+ The zip-archive library provides functions for creating, modifying, and
+ extracting files from zip archives.
+ .
+ ${haskell:Blurb}
